@@ -1,0 +1,96 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Renal Clearance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--bg:#fff;--fg:#111;--bar:#f1f1f1;--bd:#ccc}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1b1b1b;--fg:#eee;--bar:#2a2a2a;--bd:#555}}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:Helvetica,Arial,sans-serif}
+#w{max-width:1200px;margin:0 auto;padding:8px}
+svg{width:100%;height:auto;display:block;background:#fff;border-radius:6px}
+text{font-family:Helvetica,Arial,sans-serif;fill:#000}
+.o{fill:#fff;stroke:#111;stroke-width:7;paint-order:stroke;stroke-linejoin:round;font-weight:700}
+.b{cursor:pointer}
+#bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--bar);border:1px solid var(--bd);border-radius:8px;padding:10px;margin-top:8px}
+button{font:inherit;padding:6px 14px;border:1px solid var(--bd);border-radius:6px;background:var(--bg);color:var(--fg);cursor:pointer}
+button.on{background:#1f8f3a;color:#fff;border-color:#1f8f3a}
+#ro{margin-top:8px;font-size:16px;line-height:1.5}
+</style></head><body><div id="w">
+<svg viewBox="0 0 1440 1100">
+<defs>
+<linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#0e6a28"/><stop offset=".45" stop-color="#27c04a"/><stop offset=".8" stop-color="#14862f"/><stop offset="1" stop-color="#0c5d22"/></linearGradient>
+<linearGradient id="wg" x1="0" x2="1"><stop offset="0" stop-color="#2a8f3f" stop-opacity="0"/><stop offset=".6" stop-color="#2a8f3f" stop-opacity=".75"/><stop offset="1" stop-color="#0b5a22"/></linearGradient>
+<clipPath id="bc"><path id="bp" d="M72 70L72 100C72 140 20 150 20 220C20 280 55 300 55 340C55 380 20 400 20 450L20 500C20 520 40 530 70 530L130 530C160 530 180 520 180 500L180 450C180 400 145 380 145 340C145 300 180 280 180 220C180 150 128 140 128 100L128 70Z"/></clipPath>
+<clipPath id="tc"><path d="M10 40L110 40L100 170Q94 262 60 268Q26 262 20 170Z"/></clipPath>
+</defs>
+<rect x="10" y="80" width="200" height="540" fill="#e9dadb"/><rect x="465" y="80" width="947" height="540" fill="#e9dadb"/>
+<polygon points="272,274 340,274 340,252 404,299 340,346 340,324 272,324" fill="#000"/>
+<g id="bots"></g>
+<text class="o" x="115" y="478" text-anchor="middle" font-size="46">1.0 mg</text><text class="o" x="115" y="545" text-anchor="middle" font-size="46">1.0 L</text>
+<text x="447" y="492" text-anchor="end" font-size="46">Plasma</text><text x="447" y="550" text-anchor="end" font-size="46" font-weight="700">after</text><text x="447" y="608" text-anchor="end" font-size="46">Clearance</text>
+<text class="o" x="1372" y="247" text-anchor="end" font-size="46" style="stroke-width:6">volume of blood that got</text><text class="o" x="1372" y="305" text-anchor="end" font-size="46" style="stroke-width:6">"cleared" of this</text><text class="o" x="1372" y="363" text-anchor="end" font-size="46" style="stroke-width:6">substance</text>
+<text x="35" y="650" font-size="25">Renal artery</text><text x="882" y="650" font-size="25">Renal vein</text>
+<g stroke="#000" stroke-width="2.5"><path d="M47 676H152"/><path d="M455 676H560"/></g><path d="M150 670l10 6-10 6zM548 670l12 6-12 6z"/>
+<path d="M255 640C320 610 405 650 410 735C412 800 360 870 300 868C260 866 240 840 262 810C285 780 280 750 255 735C225 715 225 660 255 640Z" fill="#e48f8f" stroke="#333" stroke-width="2"/>
+<path d="M285 752L268 790Q258 830 258 862" fill="none" stroke="#333" stroke-width="22" stroke-linecap="round"/><path d="M285 752L268 790Q258 830 258 862" fill="none" stroke="#f5e6a8" stroke-width="18" stroke-linecap="round"/>
+<path d="M178 688C220 700 235 730 285 752" fill="none" stroke="#333" stroke-width="27" stroke-linecap="round"/><path d="M178 688C220 700 235 730 285 752" fill="none" stroke="#f0a6a6" stroke-width="23" stroke-linecap="round"/>
+<path d="M285 752C330 760 380 715 436 686" fill="none" stroke="#333" stroke-width="27" stroke-linecap="round"/><path d="M285 752C330 760 380 715 436 686" fill="none" stroke="#9fb0e0" stroke-width="23" stroke-linecap="round"/>
+<g id="pts"></g>
+<path d="M247 870h20v28h12l-22 25-22-25h12z" fill="#f2c250" stroke="#b78a1c"/><text x="288" y="905" font-size="16">U<tspan font-size="11" dy="4">x</tspan><tspan dy="-4"> · V̇</tspan></text>
+<polygon points="270,925 455,812 455,1082 270,1002" fill="#ece3cd"/>
+<rect x="150" y="872" width="95" height="78" rx="8" fill="#fff" stroke="#bbb"/><path d="M170 960H300C300 1010 270 1040 245 1040L225 1075H195L205 1040C180 1035 170 1000 170 960Z" fill="#f4f4f4" stroke="#ccc"/><ellipse cx="236" cy="972" rx="72" ry="24" fill="#fff" stroke="#bbb"/>
+<text x="288" y="1068" font-size="46">Urine</text>
+<polygon points="475,785 1397,703 1397,785" fill="url(#wg)"/>
+<g id="tubes"></g><g id="mg"></g><g id="nums"></g>
+</svg>
+<div id="bar"><b>Scenario:</b><span id="btns"></span><button id="play">▶ Play all</button><span style="opacity:.7">(click a bottle or number to select)</span></div>
+<div id="ro"></div></div>
+<script>
+const $=i=>document.getElementById(i),NS='http://www.w3.org/2000/svg',C=[0,.25,.5,.75,1];
+const mk=(p,t,a,h)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(h)e.innerHTML=h;p.appendChild(e);return e};
+const fmt=v=>Math.max(0,v).toFixed(2).replace(/0$/,'');
+const BP=document.getElementById('bp').getAttribute('d');
+function bottle(parent,tf){const g=mk(parent,'g',{transform:tf});
+ mk(g,'rect',{x:0,y:0,width:200,height:540,fill:'rgba(255,255,255,.45)','clip-path':'url(#bc)'});
+ const clr=mk(g,'rect',{x:0,y:150,width:200,height:0,fill:'rgba(205,228,238,.7)','clip-path':'url(#bc)'});
+ const sf=mk(g,'path',{d:'M20 150H180',stroke:'rgba(255,255,255,.95)','stroke-width':3,'clip-path':'url(#bc)',opacity:0});
+ const liq=mk(g,'rect',{x:0,y:150,width:200,height:380,fill:'url(#lg)','clip-path':'url(#bc)'});
+ mk(g,'path',{d:BP,fill:'none',stroke:'rgba(255,255,255,.75)','stroke-width':3});
+ mk(g,'path',{d:'M45 185C28 225 55 255 50 300',fill:'none',stroke:'rgba(255,255,255,.4)','stroke-width':6,'stroke-linecap':'round'});
+ mk(g,'rect',{x:64,y:18,width:72,height:58,rx:9,fill:'#1f8f3a',stroke:'#12602a','stroke-width':2});
+ mk(g,'path',{d:'M72 30V68M82 30V68M92 30V68M102 30V68M112 30V68M122 30V68',stroke:'#12602a','stroke-width':1.5});
+ return{g,liq,clr,sf}}
+const lb=bottle($('bots'),'translate(10 80)');
+const B=[],T=[],L=[],M=[],N=[];
+for(let i=0;i<5;i++){const cx=565+190*i,b=bottle($('bots'),`translate(${470+190*i} 80) scale(.95)`);b.g.classList.add('b');b.g.onclick=()=>sel(i);B.push(b);
+ const t=mk($('bots'),'text',{x:cx,y:546,'text-anchor':'middle','font-size':46,class:'o'});L.push(t);
+ const n=mk($('nums'),'text',{x:cx-8,y:78,'text-anchor':'middle','font-size':72,'font-weight':700,class:'b'},''+(i+1));n.onclick=()=>sel(i);N.push(n);
+ const tx=[551,750,946,1140,1318][i],tg=mk($('tubes'),'g',{transform:`translate(${tx-60} 812)`});tg.classList.add('b');tg.onclick=()=>sel(i);
+ mk(tg,'rect',{x:0,y:0,width:120,height:275,fill:'#fff',opacity:.85});
+ const lq=mk(tg,'rect',{x:0,y:200,width:120,height:80,'clip-path':'url(#tc)'});
+ mk(tg,'path',{d:'M10 40L110 40L100 170Q94 262 60 268Q26 262 20 170Z',fill:'none',stroke:'#9a9a9a','stroke-width':2});
+ mk(tg,'path',{d:'M6 38Q10 8 60 6Q110 8 114 38Z',fill:'rgba(220,230,230,.7)',stroke:'#9a9a9a','stroke-width':2});
+ T.push(lq);const m=mk($('mg'),'text',{x:[543,760,943,1140,1317][i],y:772,'text-anchor':'middle','font-size':44,class:'o'});M.push(m)}
+const bt=$('btns');C.forEach((c,i)=>{const b=document.createElement('button');b.textContent=i+1;b.onclick=()=>sel(i);bt.appendChild(b)});
+let s=2,p=0,auto=false,tS=performance.now(),tick=0;
+function sel(i,keep){s=i;p=0;tS=performance.now();if(!keep){auto=false;$('play').textContent='▶ Play all'}}
+$('play').onclick=()=>{auto=!auto;$('play').textContent=auto?'■ Stop':'▶ Play all';if(auto)sel(0,true)};
+// particles
+const P=[[[47,676],[150,678],[185,690],[235,722],[285,752]],[[285,752],[330,752],[380,712],[430,688],[465,676],[560,676]],[[285,752],[268,790],[259,835],[258,862]]];
+const len=P.map(pl=>{let c=[0];for(let k=1;k<pl.length;k++)c.push(c[k-1]+Math.hypot(pl[k][0]-pl[k-1][0],pl[k][1]-pl[k-1][1]));return c});
+const at=(sg,d)=>{const pl=P[sg],c=len[sg];let k=1;while(k<c.length-1&&c[k]<d)k++;const f=Math.min(1,(d-c[k-1])/(c[k]-c[k-1]));return[pl[k-1][0]+(pl[k][0]-pl[k-1][0])*f,pl[k-1][1]+(pl[k][1]-pl[k-1][1])*f]};
+const pts=[];for(let i=0;i<46;i++){const e=mk($('pts'),'circle',{r:4.2,fill:'#22d04a',stroke:'#0c6b25','stroke-width':1});pts.push({e,sg:0,d:i/46*len[0][4]})}
+let last=performance.now();
+function frame(now){const dt=Math.min(.05,(now-last)/1000);last=now;
+ p=Math.min(1,(now-tS)/3500);const ep=p*p*(3-2*p),cur=C[s];
+ if(auto&&p>=1&&now-tS>5200)sel((s+1)%5,true);
+ for(const q of pts){q.d+=95*dt;if(q.d>=len[q.sg][len[q.sg].length-1]){if(q.sg==0)q.sg=Math.random()<cur?2:1;else q.sg=0;q.d=0}
+  const[x,y]=at(q.sg,q.d);q.e.setAttribute('cx',x);q.e.setAttribute('cy',y)}
+ for(let i=0;i<5;i++){const act=i==s,c=C[i],v=act?c*ep:c;
+  B[i].liq.setAttribute('y',530-380*(1-v));B[i].liq.setAttribute('height',380*(1-v)+1);B[i].clr.setAttribute('height',380*v+1);B[i].sf.setAttribute('opacity',v>0.01?1:0);B[i].g.style.opacity=act?1:.6;
+  L[i].textContent=fmt(1-v)+' L';L[i].style.opacity=act?1:.55;N[i].style.fill=act?'#000':'#999';
+  const h=v>0?30+170*v:0;T[i].setAttribute('y',268-h);T[i].setAttribute('height',h+2);
+  T[i].setAttribute('fill',`rgb(${190-170*v},${235-95*v},${175-125*v})`);M[i].textContent=fmt(v)+' mg';M[i].style.opacity=act?1:.55}
+ const u=cur*ep;$('ro').innerHTML=`<b>Scenario ${s+1}:</b> urine excretion U<sub>x</sub>·V̇ = <b>${u.toFixed(2)} mg</b> &nbsp;|&nbsp; plasma concentration P<sub>x</sub> = 1.0 mg/L<br>Clearance = U<sub>x</sub>·V̇ / P<sub>x</sub> = ${u.toFixed(2)} mg ÷ 1.0 mg/L = <b>${u.toFixed(2)} L</b> of plasma cleared &nbsp;|&nbsp; plasma left in renal vein: ${(1-u).toFixed(2)} L`;
+ [...bt.children].forEach((b,i)=>b.className=i==s?'on':'');
+ requestAnimationFrame(frame)}
+requestAnimationFrame(frame);
+</script></body></html>
